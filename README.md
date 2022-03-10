@@ -16,3 +16,7 @@ UserList fetch from https://reqres.in/api/users?page=1
 Firebase Url
 
 https://reactpr07.web.app/
+
+netlify Url
+
+https://loving-beaver-77a0c9.netlify.app/
