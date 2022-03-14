@@ -19,7 +19,6 @@ export const UserList = (props: {
 }) => {
   return (
     <table>
-      {/* headings of userlist */}
       <thead>
         <tr className="headRow">
           <th className="col-1">Name</th>
@@ -29,11 +28,9 @@ export const UserList = (props: {
         </tr>
       </thead>
       <tbody>
-        {/* showing UsersList */}
         {props.users.map((user, index) => {
           return (
             <>
-              {/* first row for owner */}
               {index === 0 && (
                 <tr>
                   <td className="userDetailsWrapper">
@@ -60,7 +57,6 @@ export const UserList = (props: {
                   </td>
                 </tr>
               )}
-              {/* other users row */}
               {index !== 0 && (
                 <tr
                   onMouseEnter={() => {

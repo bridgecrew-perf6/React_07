@@ -17,7 +17,6 @@ type jsonData = {
   data: [];
 };
 const UserListCardWrapper = () => {
-  // this hook hold the user details object while hover over respective user
   const [user, setUser] = useState<user | null>(null);
 
   const [users, setUsers] = useState<[]>([]);
@@ -28,7 +27,7 @@ const UserListCardWrapper = () => {
 
   const makeHttpRequestWithPage = async (pageNumber: number) => {
     setIsloading(true);
-    await fetch(`https://reqres.in/api/users?page=${pageNumber}`, {
+    await fetch(`${process.env.REACT_APP_API}users?page=${pageNumber}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
@@ -75,7 +74,6 @@ const UserListCardWrapper = () => {
 
   return (
     <div className="container userListCardWrapper">
-      {/* <UserList/> component which contain user list */}
       {!isLoading && (
         <UserList
           users={users}
@@ -86,7 +84,6 @@ const UserListCardWrapper = () => {
         />
       )}
       {isLoading && <p>Loading...</p>}
-      {/* <UserProfileCard /> component which contain user details in card */}
       <UserProfileCard user={user} />
     </div>
   );
