@@ -16,7 +16,6 @@
 .cardUserName {
   font-size: 14px;
   font-weight: 700;
-  margin-top: 1px;
 }
 .userDot {
   font-size: 24px;
@@ -25,12 +24,10 @@
 .cardUserEmail {
   font-size: 12px;
   opacity: 0.6;
-  margin-top: 1px;
 }
 .cardUserPlan {
   font-size: 16px;
   font-weight: 700;
-  margin-top: 10px;
 }
 .userProfileCard button {
   font-size: 12px;
